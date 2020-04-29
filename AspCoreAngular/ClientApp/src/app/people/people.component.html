@@ -1,0 +1,27 @@
+<h1>My Products</h1>
+<button type="button" routerLink="create">Add new person</button>
+
+<p *ngIf="!persons"><em>Loading...</em></p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="persons">
+  <thead>
+    <tr>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Hobby</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of persons">
+      <td>{{ person.lastName }}</td>
+      <td>{{ person.firstName }}</td>
+      <td>{{ person.hobby }}</td>
+      <td>{{ person.age }}</td>
+      <td>
+        <button type="button" [routerLink]="['update/', person.id]">Update</button>
+        <button type="button" (click)="delete(person.id)">Remove</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
