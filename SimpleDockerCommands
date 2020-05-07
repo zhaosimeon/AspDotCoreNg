@@ -1,0 +1,7 @@
+1) dotnet publish -c Release
+2) docker build -t aspmemberspa .
+3) docker run -p 8080:80 aspmemberspa
+
+publish to docker hub registry
+docker build -t zhaosimeon/spa-ng-asp-core
+docker push zhaosimeon/spa-ng-asp-core
