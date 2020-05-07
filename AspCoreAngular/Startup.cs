@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace AspCoreAngular
 {
@@ -30,6 +31,14 @@ namespace AspCoreAngular
                     .AllowAnyHeader().WithMethods("POST","DELETE","GET","PUT"));
             });
             services.AddControllersWithViews();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "People API",
+                    Version = "v1"
+                });
+            });
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -72,7 +81,12 @@ namespace AspCoreAngular
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
             });
-            
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "People API V1");
+            });
             app.UseSpa(spa =>
             {
                 // To learn more about options for serving an Angular SPA from ASP.NET Core,

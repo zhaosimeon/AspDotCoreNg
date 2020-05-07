@@ -1,0 +1,9 @@
+version: '3.0'
+ 
+services:
+   memberspa:
+     image: zhaosimeon/spa-ng-asp-core:runtime
+     build:
+       context: .
+     ports:
+       - "8080:5000"
