@@ -19,7 +19,7 @@
       }
     },
     "AspCoreAngular": {
-      "commandName": "Docker",
+      "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
