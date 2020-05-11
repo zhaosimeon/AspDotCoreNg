@@ -21,7 +21,7 @@ namespace DataAccessAzureDB
                 entity.Property(e => e.FirstName).IsRequired();
             });
 
-            modelBuilder.Entity<Member>(entity =>
+            modelBuilder.Entity<Members>(entity =>
             {
                 entity.HasKey(e => e.Id);
                 
@@ -29,7 +29,7 @@ namespace DataAccessAzureDB
             });
         }
         public DbSet<Person> Persons { get; set; }
-        public DbSet<Member> Members { get; set; }
+        public DbSet<Members> Members { get; set; }
         public DbSet<WeatherForecast> WeatherForecasts { get; set; }
     }
 }
