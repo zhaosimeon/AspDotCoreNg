@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataAccessAzureDB.MemberModel
 {
-   public class Member
+   public class Members
     {
         [Key]
         public int Id { get; set; }
