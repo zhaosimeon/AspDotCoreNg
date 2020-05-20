@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {MemberAddComponent} from './member-add/member-add.component';
 import {MemberGetComponent} from './member-get/member-get.component';
 import {MemberEditComponent} from './member-edit/member-edit.component';
+import { SingerNgClassComponent } from './singer-ng-class/singer-ng-class.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'members',
     component: MemberGetComponent
+  },
+  {
+    path: 'singers',
+    component: SingerNgClassComponent
   }
 ];
 
