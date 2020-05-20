@@ -10,13 +10,15 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MemberService } from './member.service';
+import { SingerNgClassComponent } from './singer-ng-class/singer-ng-class.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MemberAddComponent,
     MemberGetComponent,
-    MemberEditComponent
+    MemberEditComponent,
+    SingerNgClassComponent
   ],
   imports: [
     BrowserModule,
