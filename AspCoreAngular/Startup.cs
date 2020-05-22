@@ -44,13 +44,14 @@ namespace AspCoreAngular
             {
                 configuration.RootPath = "PianoStudio/dist";
             });
-            //services.AddDbContext<PeopleContext>(options =>
-            //{
-            //    options.UseSqlServer(Configuration.GetConnectionString("AzureDbConn"));
-            //});
 
-            var connectionString = Configuration.GetConnectionString("MySqlDB");
-            services.AddDbContext<PeopleContext>(o => o.UseMySQL(connectionString));
+            services.AddDbContext<PeopleContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("AzureDbConn"));
+            });
+
+            //var connectionString = Configuration.GetConnectionString("AzureDbConn");
+            //services.AddDbContext<PeopleContext>(o => o.UseMySQL(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

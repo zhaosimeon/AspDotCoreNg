@@ -1,10 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-using MySql.Data.EntityFrameworkCore.Metadata;
 
 namespace DataAccessAzureDB.Migrations
 {
-    public partial class mysqlDb : Migration
+    public partial class MSSQLDBINit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,9 +12,9 @@ namespace DataAccessAzureDB.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    MemberName = table.Column<string>(nullable: false),
-                    MemberBio = table.Column<string>(nullable: true),
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MemberName = table.Column<string>(maxLength: 100, nullable: false),
+                    MemberBio = table.Column<string>(maxLength: 300, nullable: false),
                     MemberAge = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -28,7 +27,7 @@ namespace DataAccessAzureDB.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Age = table.Column<int>(nullable: false),
                     LastName = table.Column<string>(maxLength: 30, nullable: false),
                     FirstName = table.Column<string>(maxLength: 30, nullable: false),
@@ -44,7 +43,7 @@ namespace DataAccessAzureDB.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Date = table.Column<DateTime>(nullable: false),
                     TemperatureC = table.Column<int>(nullable: false),
                     Summary = table.Column<string>(nullable: true)

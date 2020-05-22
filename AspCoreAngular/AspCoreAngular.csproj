@@ -11,7 +11,7 @@
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
     <UserSecretsId>9e8447f1-5ab7-4cc8-bbe8-da39cedd3046</UserSecretsId>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
