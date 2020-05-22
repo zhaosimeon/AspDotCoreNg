@@ -11,6 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MemberService } from './member.service';
 import { SingerNgClassComponent } from './singer-ng-class/singer-ng-class.component';
+import { TvRatingFormComponent } from './tv-rating-form/tv-rating-form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,14 +20,16 @@ import { SingerNgClassComponent } from './singer-ng-class/singer-ng-class.compon
     MemberAddComponent,
     MemberGetComponent,
     MemberEditComponent,
-    SingerNgClassComponent
+    SingerNgClassComponent,
+    TvRatingFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlimLoadingBarModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [MemberService],
   bootstrap: [AppComponent]
