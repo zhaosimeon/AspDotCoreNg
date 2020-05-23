@@ -13,6 +13,10 @@ import { MemberService } from './member.service';
 import { SingerNgClassComponent } from './singer-ng-class/singer-ng-class.component';
 import { TvRatingFormComponent } from './tv-rating-form/tv-rating-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AnimateComponent } from './animate/animate.component';
+import { DemoAnimationComponent } from './demo-animation/demo-animation.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MemberGetComponent,
     MemberEditComponent,
     SingerNgClassComponent,
-    TvRatingFormComponent
+    TvRatingFormComponent,
+    AnimateComponent,
+    DemoAnimationComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +35,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SlimLoadingBarModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [MemberService],
   bootstrap: [AppComponent]

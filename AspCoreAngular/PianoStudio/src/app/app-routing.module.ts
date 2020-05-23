@@ -4,7 +4,8 @@ import {MemberAddComponent} from './member-add/member-add.component';
 import {MemberGetComponent} from './member-get/member-get.component';
 import {MemberEditComponent} from './member-edit/member-edit.component';
 import { SingerNgClassComponent } from './singer-ng-class/singer-ng-class.component';
-
+import {DemoAnimationComponent} from './demo-animation/demo-animation.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'singers',
     component: SingerNgClassComponent
+  }  ,
+  {
+    path: 'animations',
+    component: DemoAnimationComponent
   }
 ];
 
