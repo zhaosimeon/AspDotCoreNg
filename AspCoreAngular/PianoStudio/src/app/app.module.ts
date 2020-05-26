@@ -10,12 +10,9 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MemberService } from './member.service';
-import { SingerNgClassComponent } from './singer-ng-class/singer-ng-class.component';
-import { TvRatingFormComponent } from './tv-rating-form/tv-rating-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AnimateComponent } from './animate/animate.component';
-import { DemoAnimationComponent } from './demo-animation/demo-animation.component';
+import { UiDisplayModule } from './ui-display/ui-display.module';
 
 
 @NgModule({
@@ -23,11 +20,7 @@ import { DemoAnimationComponent } from './demo-animation/demo-animation.componen
     AppComponent,
     MemberAddComponent,
     MemberGetComponent,
-    MemberEditComponent,
-    SingerNgClassComponent,
-    TvRatingFormComponent,
-    AnimateComponent,
-    DemoAnimationComponent
+    MemberEditComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +29,8 @@ import { DemoAnimationComponent } from './demo-animation/demo-animation.componen
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    UiDisplayModule
   ],
   providers: [MemberService],
   bootstrap: [AppComponent]
